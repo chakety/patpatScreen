@@ -15,6 +15,8 @@ extern int IIC_Address;
 static pthread_t t1, t2;
 UBYTE flag_2in9=1, dis_lock=1, dis_flag=1;	
 UBYTE *BlackImage, *BlackImage_ASYNC;
+weatherData out_data;
+const char* city = "Boston";
 
 //thread
 void Handler_2in9(int signo)
@@ -46,6 +48,11 @@ void *pthread_irq_2in9(void *arg)
 	pthread_exit(NULL);
 }
 
+
+
+//Display
+char* photo_board[2] = {"./pic/whiteboard_1.bmp","./pic/whiteboard_2.bmp"}; 
+
 void *pthread_dis_2in9(void *arg)
 {
 	while(flag_2in9) {
@@ -66,17 +73,9 @@ void *pthread_dis_2in9(void *arg)
 	pthread_exit(NULL);
 }
 
-//Display
-char* photo_board[2] = {"./pic/whiteboard_1.png","./pic/whiteboard_2.png"}; 
-
-
-
 
 // Fucntions 
 int get_weather_teminaltest() {
-    weatherData out_data;
-    const char* city = "Boston";
-
     // Read API key from environment variable
     const char* api_key = getenv("WEATHER_API_KEY");
     if (!api_key) {
@@ -96,11 +95,55 @@ int get_weather_teminaltest() {
 
 
 
-
-
-
-
-
 int main(){
     get_weather_teminaltest();
+
+	IIC_Address = 0x48;
+	pthread_create(&t1, NULL, pthread_irq_2in9, NULL);
+
+	UDOUBLE i = 0, j = 0, k = 0;
+	//star exe
+	singal(SIGINT,Handler_2in9);// when ctrl+c press, run Handler_2in9
+	//initialization
+	if(DEV_ModuleInit()) {
+		printf("init failed\r\n");
+		return -1;
+	}
+
+	EPD_2IN9_V2_Init();
+	EPD_2IN9_V2_Clear();
+	ICNT_Init();
+	DEV_Delay_ms(100);
+
+	// adding image cache
+	UWORD Imagesize = ((EPD_2IN9_V2_WIDTH % 8 == 0)? (EPD_2IN9_V2_WIDTH / 8 ): (EPD_2IN9_V2_WIDTH / 8 + 1)) * EPD_2IN9_V2_HEIGHT;
+	if((BlackImage = (UBYTE*)malloc(Imagesize)) == NULL){
+		printf("Failed to get memory....\n");
+		return -1;
+	}
+	if((BlackImage_ASYNC = (UBYTE*)malloc(Imagesize)) == NULL){
+		printf("Failed to get memory....\n");
+		return -1;
+	}
+
+	// get whiteboard image
+	printf("New Image\r\n");
+	Paint_NewImage(BlackImage, EPD_2IN9_V2_WIDTH, EPD_2IN9_V2_HEIGHT, 90, WHITE);
+    Paint_SelectImage(BlackImage);
+    Paint_Clear(WHITE);
+	GUI_ReadBmp("./pic/whiteboard_1.bmp", 0, 0);
+
+	//dispplay weather & time
+	Paint_DrawString_EN( 0, 0,city,&Font16, WHITE, BLACK);//City
+	Paint_DrawString_EN( 0, 20,out_data.localtime,&Font16, WHITE, BLACK);//Time
+	Paint_DrawString_EN( 0, 60,"Temperature:",&Font16, WHITE, BLACK);//Temperature
+	Paint_DrawString_EN( 0, 40,out_data.condition,&Font16, WHITE, BLACK);//Condition
+
+	
+
+
+
+
+
+
 }
