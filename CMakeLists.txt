@@ -22,7 +22,7 @@ include_directories(lib/Driver)
 include_directories(lib/GUI)
 include_directories(lib/Fonts)
 # Define an executable for the project
-add_executable(main main.c func/weather.c) 
+add_executable(main main.c func/weather.c, func/memo.c) 
 # Include directories for the executable
 target_include_directories(main PRIVATE ${CURL_INCLUDE_DIRS} ${cJSON_INCLUDE_DIRS} lib/Driver lib/EDP lib/COnfig)
 

@@ -4,10 +4,10 @@
 typedef struct{
 
     /* data */
-    char city[10];
+    char city[150];
     float temperature;
-    char condition[100];
-    char localtime[100];
+    char condition[20];
+    char localtime[50];
 }weatherData;
 
 int fetch_weather_data(const char* city, const char* api_key, weatherData* data);
