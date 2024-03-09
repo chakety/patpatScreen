@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/func/memo.c.o"
+  "CMakeFiles/main.dir/func/memo.c.o.d"
   "CMakeFiles/main.dir/func/weather.c.o"
   "CMakeFiles/main.dir/func/weather.c.o.d"
   "CMakeFiles/main.dir/main.c.o"

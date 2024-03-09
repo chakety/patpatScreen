@@ -726,8 +726,45 @@ void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, int32_t Nummber,
     }
 
     //show
-    Paint_DrawString_EN(Xpoint, Ypoint, (const char*)pStr, Font, Color_Background, Color_Foreground);
+    Paint_DrawString_EN(Xpoint, Ypoint, (const char*)pStr, Font, Color_Foreground, Color_Background);
 }
+
+/******************************************************************************
+function:	Display float number
+parameter:
+    Xstart           ：X coordinate
+    Ystart           : Y coordinate
+    Nummber          : The float number displayed
+    decimal          : The number of decimal places
+    Font             ：A structure pointer that displays a character size
+    Color_Foreground : Select the foreground color
+    Color_Background : Select the background color
+******************************************************************************/
+void Paint_DrawFloatNum(UWORD Xpoint, UWORD Ypoint, float Nummber, uint8_t decimal,
+                        sFONT* Font, UWORD Color_Foreground, UWORD Color_Background)
+{
+    int32_t temp = (int32_t)Nummber;
+    float decimal_part = Nummber - (float)temp;
+    int32_t decimal_temp = (int32_t)(decimal_part * pow(10, decimal));
+
+    // Draw integer part
+    Paint_DrawNum(Xpoint, Ypoint, temp, Font, Color_Foreground, Color_Background);
+
+    // Calculate the width of integer part
+    int16_t Num_Bit = 0;
+    while (temp) {
+        Num_Bit++;
+        temp /= 10;
+    }
+    UWORD Dx = Font->Width;
+
+    // Draw decimal point
+    Paint_DrawChar(Xpoint + Dx * Num_Bit, Ypoint, '.', Font, Color_Background, Color_Foreground);
+
+    // Draw decimal part
+    Paint_DrawNum(Xpoint + Dx * (Num_Bit + 1), Ypoint, decimal_temp, Font, Color_Foreground, Color_Background);
+}
+
 
 /******************************************************************************
 function:	Display time

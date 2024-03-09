@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/chakety/patpat/patpatScreen/func/memo.c" "CMakeFiles/main.dir/func/memo.c.o" "gcc" "CMakeFiles/main.dir/func/memo.c.o.d"
   "/home/chakety/patpat/patpatScreen/func/weather.c" "CMakeFiles/main.dir/func/weather.c.o" "gcc" "CMakeFiles/main.dir/func/weather.c.o.d"
   "/home/chakety/patpat/patpatScreen/main.c" "CMakeFiles/main.dir/main.c.o" "gcc" "CMakeFiles/main.dir/main.c.o.d"
   )

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/chakety/patpat/patpatScreen/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/patpat_screen.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/patpat_screen.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/patpat_screen.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chakety/patpat/patpatScreen/build/CMakeFiles --progress-num=1,2,3 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/patpat_screen.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/chakety/patpat/patpatScreen/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target patpat_screen"
+.PHONY : CMakeFiles/patpat_screen.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chakety/patpat/patpatScreen/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+CMakeFiles/patpat_screen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chakety/patpat/patpatScreen/build/CMakeFiles 17
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/patpat_screen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/chakety/patpat/patpatScreen/build/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/patpat_screen.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+patpat_screen: CMakeFiles/patpat_screen.dir/rule
+.PHONY : patpat_screen
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/patpat_screen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/clean
+.PHONY : CMakeFiles/patpat_screen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -147,7 +147,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=main
+CMAKE_PROJECT_NAME:STATIC=patpatscreen
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0
@@ -253,6 +253,18 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//Use BCM2835 library
+USE_BCM2835_LIB:BOOL=OFF
+
+//Use GPIOD library
+USE_GPIOD_LIB:BOOL=OFF
+
+//Use LGPIO library
+USE_LGPIO_LIB:BOOL=ON
+
+//Use WiringPi library
+USE_WIRINGPI_LIB:BOOL=OFF
+
 //The directory containing a CMake configuration file for cJSON.
 cJSON_DIR:PATH=/usr/local/lib/cmake/cJSON
 
@@ -264,6 +276,15 @@ main_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 main_SOURCE_DIR:STATIC=/home/chakety/patpat/patpatScreen
+
+//Value Computed by CMake
+patpatscreen_BINARY_DIR:STATIC=/home/chakety/patpat/patpatScreen/build
+
+//Value Computed by CMake
+patpatscreen_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+patpatscreen_SOURCE_DIR:STATIC=/home/chakety/patpat/patpatScreen
 
 //Path to a library.
 pkgcfg_lib_PC_CURL_curl:FILEPATH=/usr/lib/arm-linux-gnueabihf/libcurl.so

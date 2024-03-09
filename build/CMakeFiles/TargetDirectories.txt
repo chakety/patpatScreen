@@ -1,3 +1,3 @@
-/home/chakety/patpat/patpatScreen/build/CMakeFiles/main.dir
+/home/chakety/patpat/patpatScreen/build/CMakeFiles/patpat_screen.dir
 /home/chakety/patpat/patpatScreen/build/CMakeFiles/edit_cache.dir
 /home/chakety/patpat/patpatScreen/build/CMakeFiles/rebuild_cache.dir

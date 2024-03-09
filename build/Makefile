@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named patpat_screen
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+patpat_screen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 patpat_screen
+.PHONY : patpat_screen
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+patpat_screen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/build
+.PHONY : patpat_screen/fast
+
+func/memo.o: func/memo.c.o
+.PHONY : func/memo.o
+
+# target to build an object file
+func/memo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/func/memo.c.o
+.PHONY : func/memo.c.o
+
+func/memo.i: func/memo.c.i
+.PHONY : func/memo.i
+
+# target to preprocess a source file
+func/memo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/func/memo.c.i
+.PHONY : func/memo.c.i
+
+func/memo.s: func/memo.c.s
+.PHONY : func/memo.s
+
+# target to generate assembly for a file
+func/memo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/func/memo.c.s
+.PHONY : func/memo.c.s
 
 func/weather.o: func/weather.c.o
 .PHONY : func/weather.o
 
 # target to build an object file
 func/weather.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/func/weather.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/func/weather.c.o
 .PHONY : func/weather.c.o
 
 func/weather.i: func/weather.c.i
@@ -142,7 +166,7 @@ func/weather.i: func/weather.c.i
 
 # target to preprocess a source file
 func/weather.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/func/weather.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/func/weather.c.i
 .PHONY : func/weather.c.i
 
 func/weather.s: func/weather.c.s
@@ -150,15 +174,327 @@ func/weather.s: func/weather.c.s
 
 # target to generate assembly for a file
 func/weather.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/func/weather.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/func/weather.c.s
 .PHONY : func/weather.c.s
+
+lib/Config/DEV_Config.o: lib/Config/DEV_Config.c.o
+.PHONY : lib/Config/DEV_Config.o
+
+# target to build an object file
+lib/Config/DEV_Config.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/DEV_Config.c.o
+.PHONY : lib/Config/DEV_Config.c.o
+
+lib/Config/DEV_Config.i: lib/Config/DEV_Config.c.i
+.PHONY : lib/Config/DEV_Config.i
+
+# target to preprocess a source file
+lib/Config/DEV_Config.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/DEV_Config.c.i
+.PHONY : lib/Config/DEV_Config.c.i
+
+lib/Config/DEV_Config.s: lib/Config/DEV_Config.c.s
+.PHONY : lib/Config/DEV_Config.s
+
+# target to generate assembly for a file
+lib/Config/DEV_Config.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/DEV_Config.c.s
+.PHONY : lib/Config/DEV_Config.c.s
+
+lib/Config/RPI_gpiod.o: lib/Config/RPI_gpiod.c.o
+.PHONY : lib/Config/RPI_gpiod.o
+
+# target to build an object file
+lib/Config/RPI_gpiod.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/RPI_gpiod.c.o
+.PHONY : lib/Config/RPI_gpiod.c.o
+
+lib/Config/RPI_gpiod.i: lib/Config/RPI_gpiod.c.i
+.PHONY : lib/Config/RPI_gpiod.i
+
+# target to preprocess a source file
+lib/Config/RPI_gpiod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/RPI_gpiod.c.i
+.PHONY : lib/Config/RPI_gpiod.c.i
+
+lib/Config/RPI_gpiod.s: lib/Config/RPI_gpiod.c.s
+.PHONY : lib/Config/RPI_gpiod.s
+
+# target to generate assembly for a file
+lib/Config/RPI_gpiod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/RPI_gpiod.c.s
+.PHONY : lib/Config/RPI_gpiod.c.s
+
+lib/Config/dev_hardware_SPI.o: lib/Config/dev_hardware_SPI.c.o
+.PHONY : lib/Config/dev_hardware_SPI.o
+
+# target to build an object file
+lib/Config/dev_hardware_SPI.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_SPI.c.o
+.PHONY : lib/Config/dev_hardware_SPI.c.o
+
+lib/Config/dev_hardware_SPI.i: lib/Config/dev_hardware_SPI.c.i
+.PHONY : lib/Config/dev_hardware_SPI.i
+
+# target to preprocess a source file
+lib/Config/dev_hardware_SPI.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_SPI.c.i
+.PHONY : lib/Config/dev_hardware_SPI.c.i
+
+lib/Config/dev_hardware_SPI.s: lib/Config/dev_hardware_SPI.c.s
+.PHONY : lib/Config/dev_hardware_SPI.s
+
+# target to generate assembly for a file
+lib/Config/dev_hardware_SPI.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_SPI.c.s
+.PHONY : lib/Config/dev_hardware_SPI.c.s
+
+lib/Config/dev_hardware_i2c.o: lib/Config/dev_hardware_i2c.c.o
+.PHONY : lib/Config/dev_hardware_i2c.o
+
+# target to build an object file
+lib/Config/dev_hardware_i2c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_i2c.c.o
+.PHONY : lib/Config/dev_hardware_i2c.c.o
+
+lib/Config/dev_hardware_i2c.i: lib/Config/dev_hardware_i2c.c.i
+.PHONY : lib/Config/dev_hardware_i2c.i
+
+# target to preprocess a source file
+lib/Config/dev_hardware_i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_i2c.c.i
+.PHONY : lib/Config/dev_hardware_i2c.c.i
+
+lib/Config/dev_hardware_i2c.s: lib/Config/dev_hardware_i2c.c.s
+.PHONY : lib/Config/dev_hardware_i2c.s
+
+# target to generate assembly for a file
+lib/Config/dev_hardware_i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_i2c.c.s
+.PHONY : lib/Config/dev_hardware_i2c.c.s
+
+lib/Driver/ICNT86X.o: lib/Driver/ICNT86X.c.o
+.PHONY : lib/Driver/ICNT86X.o
+
+# target to build an object file
+lib/Driver/ICNT86X.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Driver/ICNT86X.c.o
+.PHONY : lib/Driver/ICNT86X.c.o
+
+lib/Driver/ICNT86X.i: lib/Driver/ICNT86X.c.i
+.PHONY : lib/Driver/ICNT86X.i
+
+# target to preprocess a source file
+lib/Driver/ICNT86X.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Driver/ICNT86X.c.i
+.PHONY : lib/Driver/ICNT86X.c.i
+
+lib/Driver/ICNT86X.s: lib/Driver/ICNT86X.c.s
+.PHONY : lib/Driver/ICNT86X.s
+
+# target to generate assembly for a file
+lib/Driver/ICNT86X.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Driver/ICNT86X.c.s
+.PHONY : lib/Driver/ICNT86X.c.s
+
+lib/EPD/EPD_2in9_V2.o: lib/EPD/EPD_2in9_V2.c.o
+.PHONY : lib/EPD/EPD_2in9_V2.o
+
+# target to build an object file
+lib/EPD/EPD_2in9_V2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/EPD/EPD_2in9_V2.c.o
+.PHONY : lib/EPD/EPD_2in9_V2.c.o
+
+lib/EPD/EPD_2in9_V2.i: lib/EPD/EPD_2in9_V2.c.i
+.PHONY : lib/EPD/EPD_2in9_V2.i
+
+# target to preprocess a source file
+lib/EPD/EPD_2in9_V2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/EPD/EPD_2in9_V2.c.i
+.PHONY : lib/EPD/EPD_2in9_V2.c.i
+
+lib/EPD/EPD_2in9_V2.s: lib/EPD/EPD_2in9_V2.c.s
+.PHONY : lib/EPD/EPD_2in9_V2.s
+
+# target to generate assembly for a file
+lib/EPD/EPD_2in9_V2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/EPD/EPD_2in9_V2.c.s
+.PHONY : lib/EPD/EPD_2in9_V2.c.s
+
+lib/Fonts/font12.o: lib/Fonts/font12.c.o
+.PHONY : lib/Fonts/font12.o
+
+# target to build an object file
+lib/Fonts/font12.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font12.c.o
+.PHONY : lib/Fonts/font12.c.o
+
+lib/Fonts/font12.i: lib/Fonts/font12.c.i
+.PHONY : lib/Fonts/font12.i
+
+# target to preprocess a source file
+lib/Fonts/font12.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font12.c.i
+.PHONY : lib/Fonts/font12.c.i
+
+lib/Fonts/font12.s: lib/Fonts/font12.c.s
+.PHONY : lib/Fonts/font12.s
+
+# target to generate assembly for a file
+lib/Fonts/font12.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font12.c.s
+.PHONY : lib/Fonts/font12.c.s
+
+lib/Fonts/font16.o: lib/Fonts/font16.c.o
+.PHONY : lib/Fonts/font16.o
+
+# target to build an object file
+lib/Fonts/font16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font16.c.o
+.PHONY : lib/Fonts/font16.c.o
+
+lib/Fonts/font16.i: lib/Fonts/font16.c.i
+.PHONY : lib/Fonts/font16.i
+
+# target to preprocess a source file
+lib/Fonts/font16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font16.c.i
+.PHONY : lib/Fonts/font16.c.i
+
+lib/Fonts/font16.s: lib/Fonts/font16.c.s
+.PHONY : lib/Fonts/font16.s
+
+# target to generate assembly for a file
+lib/Fonts/font16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font16.c.s
+.PHONY : lib/Fonts/font16.c.s
+
+lib/Fonts/font20.o: lib/Fonts/font20.c.o
+.PHONY : lib/Fonts/font20.o
+
+# target to build an object file
+lib/Fonts/font20.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font20.c.o
+.PHONY : lib/Fonts/font20.c.o
+
+lib/Fonts/font20.i: lib/Fonts/font20.c.i
+.PHONY : lib/Fonts/font20.i
+
+# target to preprocess a source file
+lib/Fonts/font20.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font20.c.i
+.PHONY : lib/Fonts/font20.c.i
+
+lib/Fonts/font20.s: lib/Fonts/font20.c.s
+.PHONY : lib/Fonts/font20.s
+
+# target to generate assembly for a file
+lib/Fonts/font20.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font20.c.s
+.PHONY : lib/Fonts/font20.c.s
+
+lib/Fonts/font24.o: lib/Fonts/font24.c.o
+.PHONY : lib/Fonts/font24.o
+
+# target to build an object file
+lib/Fonts/font24.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font24.c.o
+.PHONY : lib/Fonts/font24.c.o
+
+lib/Fonts/font24.i: lib/Fonts/font24.c.i
+.PHONY : lib/Fonts/font24.i
+
+# target to preprocess a source file
+lib/Fonts/font24.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font24.c.i
+.PHONY : lib/Fonts/font24.c.i
+
+lib/Fonts/font24.s: lib/Fonts/font24.c.s
+.PHONY : lib/Fonts/font24.s
+
+# target to generate assembly for a file
+lib/Fonts/font24.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font24.c.s
+.PHONY : lib/Fonts/font24.c.s
+
+lib/Fonts/font8.o: lib/Fonts/font8.c.o
+.PHONY : lib/Fonts/font8.o
+
+# target to build an object file
+lib/Fonts/font8.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font8.c.o
+.PHONY : lib/Fonts/font8.c.o
+
+lib/Fonts/font8.i: lib/Fonts/font8.c.i
+.PHONY : lib/Fonts/font8.i
+
+# target to preprocess a source file
+lib/Fonts/font8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font8.c.i
+.PHONY : lib/Fonts/font8.c.i
+
+lib/Fonts/font8.s: lib/Fonts/font8.c.s
+.PHONY : lib/Fonts/font8.s
+
+# target to generate assembly for a file
+lib/Fonts/font8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/Fonts/font8.c.s
+.PHONY : lib/Fonts/font8.c.s
+
+lib/GUI/GUI_BMPfile.o: lib/GUI/GUI_BMPfile.c.o
+.PHONY : lib/GUI/GUI_BMPfile.o
+
+# target to build an object file
+lib/GUI/GUI_BMPfile.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/GUI/GUI_BMPfile.c.o
+.PHONY : lib/GUI/GUI_BMPfile.c.o
+
+lib/GUI/GUI_BMPfile.i: lib/GUI/GUI_BMPfile.c.i
+.PHONY : lib/GUI/GUI_BMPfile.i
+
+# target to preprocess a source file
+lib/GUI/GUI_BMPfile.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/GUI/GUI_BMPfile.c.i
+.PHONY : lib/GUI/GUI_BMPfile.c.i
+
+lib/GUI/GUI_BMPfile.s: lib/GUI/GUI_BMPfile.c.s
+.PHONY : lib/GUI/GUI_BMPfile.s
+
+# target to generate assembly for a file
+lib/GUI/GUI_BMPfile.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/GUI/GUI_BMPfile.c.s
+.PHONY : lib/GUI/GUI_BMPfile.c.s
+
+lib/GUI/GUI_Paint.o: lib/GUI/GUI_Paint.c.o
+.PHONY : lib/GUI/GUI_Paint.o
+
+# target to build an object file
+lib/GUI/GUI_Paint.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/GUI/GUI_Paint.c.o
+.PHONY : lib/GUI/GUI_Paint.c.o
+
+lib/GUI/GUI_Paint.i: lib/GUI/GUI_Paint.c.i
+.PHONY : lib/GUI/GUI_Paint.i
+
+# target to preprocess a source file
+lib/GUI/GUI_Paint.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/GUI/GUI_Paint.c.i
+.PHONY : lib/GUI/GUI_Paint.c.i
+
+lib/GUI/GUI_Paint.s: lib/GUI/GUI_Paint.c.s
+.PHONY : lib/GUI/GUI_Paint.s
+
+# target to generate assembly for a file
+lib/GUI/GUI_Paint.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/lib/GUI/GUI_Paint.c.s
+.PHONY : lib/GUI/GUI_Paint.c.s
 
 main.o: main.c.o
 .PHONY : main.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -166,7 +502,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -174,7 +510,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patpat_screen.dir/build.make CMakeFiles/patpat_screen.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -185,10 +521,52 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
+	@echo "... patpat_screen"
+	@echo "... func/memo.o"
+	@echo "... func/memo.i"
+	@echo "... func/memo.s"
 	@echo "... func/weather.o"
 	@echo "... func/weather.i"
 	@echo "... func/weather.s"
+	@echo "... lib/Config/DEV_Config.o"
+	@echo "... lib/Config/DEV_Config.i"
+	@echo "... lib/Config/DEV_Config.s"
+	@echo "... lib/Config/RPI_gpiod.o"
+	@echo "... lib/Config/RPI_gpiod.i"
+	@echo "... lib/Config/RPI_gpiod.s"
+	@echo "... lib/Config/dev_hardware_SPI.o"
+	@echo "... lib/Config/dev_hardware_SPI.i"
+	@echo "... lib/Config/dev_hardware_SPI.s"
+	@echo "... lib/Config/dev_hardware_i2c.o"
+	@echo "... lib/Config/dev_hardware_i2c.i"
+	@echo "... lib/Config/dev_hardware_i2c.s"
+	@echo "... lib/Driver/ICNT86X.o"
+	@echo "... lib/Driver/ICNT86X.i"
+	@echo "... lib/Driver/ICNT86X.s"
+	@echo "... lib/EPD/EPD_2in9_V2.o"
+	@echo "... lib/EPD/EPD_2in9_V2.i"
+	@echo "... lib/EPD/EPD_2in9_V2.s"
+	@echo "... lib/Fonts/font12.o"
+	@echo "... lib/Fonts/font12.i"
+	@echo "... lib/Fonts/font12.s"
+	@echo "... lib/Fonts/font16.o"
+	@echo "... lib/Fonts/font16.i"
+	@echo "... lib/Fonts/font16.s"
+	@echo "... lib/Fonts/font20.o"
+	@echo "... lib/Fonts/font20.i"
+	@echo "... lib/Fonts/font20.s"
+	@echo "... lib/Fonts/font24.o"
+	@echo "... lib/Fonts/font24.i"
+	@echo "... lib/Fonts/font24.s"
+	@echo "... lib/Fonts/font8.o"
+	@echo "... lib/Fonts/font8.i"
+	@echo "... lib/Fonts/font8.s"
+	@echo "... lib/GUI/GUI_BMPfile.o"
+	@echo "... lib/GUI/GUI_BMPfile.i"
+	@echo "... lib/GUI/GUI_BMPfile.s"
+	@echo "... lib/GUI/GUI_Paint.o"
+	@echo "... lib/GUI/GUI_Paint.i"
+	@echo "... lib/GUI/GUI_Paint.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

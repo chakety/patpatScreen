@@ -54,7 +54,6 @@ int fetch_weather_data(const char* city, const char* api_key, weatherData* out_d
             if (json != NULL) {
                 cJSON* location = cJSON_GetObjectItemCaseSensitive(json, "location");
                 cJSON* name = cJSON_GetObjectItemCaseSensitive(location, "name");
-                cJSON* localtime = cJSON_GetObjectItemCaseSensitive(location, "localtime");
                 cJSON* current = cJSON_GetObjectItemCaseSensitive(json, "current");
                 cJSON* temp_c = cJSON_GetObjectItemCaseSensitive(current, "temp_c");
                 cJSON* condition = cJSON_GetObjectItemCaseSensitive(current, "condition");
@@ -72,9 +71,6 @@ int fetch_weather_data(const char* city, const char* api_key, weatherData* out_d
                     strncpy(out_data->condition, text->valuestring, sizeof(out_data->condition) - 1);
                 }
 
-                if (cJSON_IsString(localtime) && (localtime->valuestring != NULL)) {
-                    strncpy(out_data->localtime, localtime->valuestring, sizeof(out_data->localtime) - 1);
-                }
 
                 cJSON_Delete(json);
             }

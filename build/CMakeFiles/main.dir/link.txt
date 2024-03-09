@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/main.dir/main.c.o CMakeFiles/main.dir/func/weather.c.o -o main  -Wl,-rpath,/home/chakety/Downloads/cJSON/build /usr/lib/arm-linux-gnueabihf/libcurl.so /home/chakety/Downloads/cJSON/build/libcjson.so 
+/usr/bin/cc -g CMakeFiles/main.dir/main.c.o CMakeFiles/main.dir/func/weather.c.o CMakeFiles/main.dir/func/memo.c.o -o main  -Wl,-rpath,/home/chakety/Downloads/cJSON/build /usr/lib/arm-linux-gnueabihf/libcurl.so /home/chakety/Downloads/cJSON/build/libcjson.so 

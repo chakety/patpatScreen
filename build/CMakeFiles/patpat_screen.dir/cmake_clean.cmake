@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/patpat_screen.dir/func/memo.c.o"
+  "CMakeFiles/patpat_screen.dir/func/memo.c.o.d"
+  "CMakeFiles/patpat_screen.dir/func/weather.c.o"
+  "CMakeFiles/patpat_screen.dir/func/weather.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Config/DEV_Config.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Config/DEV_Config.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Config/RPI_gpiod.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Config/RPI_gpiod.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_SPI.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_SPI.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_i2c.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Config/dev_hardware_i2c.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Driver/ICNT86X.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Driver/ICNT86X.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/EPD/EPD_2in9_V2.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/EPD/EPD_2in9_V2.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font12.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font12.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font16.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font16.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font20.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font20.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font24.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font24.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font8.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/Fonts/font8.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/GUI/GUI_BMPfile.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/GUI/GUI_BMPfile.c.o.d"
+  "CMakeFiles/patpat_screen.dir/lib/GUI/GUI_Paint.c.o"
+  "CMakeFiles/patpat_screen.dir/lib/GUI/GUI_Paint.c.o.d"
+  "CMakeFiles/patpat_screen.dir/main.c.o"
+  "CMakeFiles/patpat_screen.dir/main.c.o.d"
+  "patpat_screen"
+  "patpat_screen.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/patpat_screen.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
