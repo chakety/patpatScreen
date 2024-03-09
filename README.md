@@ -9,32 +9,32 @@
 
 ## Reference
 - [Manual Book](https://www.waveshare.com/wiki/2.9inch_Touch_e-Paper_HAT_Manual#Raspberry_Pi)
-- [code] (https://github.com/waveshareteam/Touch_e-Paper_HAT)
+- [code](https://github.com/waveshareteam/Touch_e-Paper_HAT)
 
 ## What does it do?
 - Get local weather and condition
-- Get random memo
+- Get a random memo
 - Support multiple pet character icon
 - Support touch interface
 
 
 ## Project Summary
-As mentioned above, this is only the hardware section for the PATPAT project, which allows to plug and play with Raspberry Pi.
+As mentioned above, this is only the hardware section for the PATPAT project, which allows users to plug and play with Raspberry Pi.
 
 
-By executing the code, the E-paper will display the city name, time, date, temperature in C, and weather conditions. Below those information, the display will show a radome memo per mintue, and the pet charaction icon at the bottom.
+By executing the code, the E-paper will display the city name, time, date, temperature in C, and weather conditions. Below that information, the display will show a radome memo per minute and the pet character icon at the bottom.
 
-Pet character icons are allowed to switch by touching the figure and will keep the same figure until the programe is disconnected or changed.
+Pet character icons can be switched by touching the figure, and they will keep the same figure until the program is disconnected or changed.
 
 ## How to run it:
 - sudo make clean
 - sudo make -j4
 - make
 
-easy, right?
+Easy, right?
 
 
 ## Future Plan
 - Add pet animation
 - re-organize the display formatting
-- Synchronize pet characters with exisitng account
+- Synchronize pet characters with existing account
